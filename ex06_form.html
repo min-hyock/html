@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form 태그
+        웹페이지에서 입력폼을 만들 때 사용하는 태그
+        사용자에게 정보를 받아주는 태그
+        필수 속성 : method(전달 방식), action(전달 위치)
+        input 태그의 속성
+        - type : 입력하는 값의 종류
+        - name : 입력한 값을 구분하기 위해 이름을 지정
+        - placeholder : 미리보기 텍스트
+        - autofocus : 자동 커서 설정
+        - readonly : 읽기 전용 지정
+    -->
+
+    <form method="get" action="#">
+        ID <input type="text" name="ID" maxlength="10" autofocus placeholder="smhrd"><br>
+        PW <input type="password" name="PW"><br>
+        강의실 <input type="text" value="2강의장" readonly>
+        <br>
+        <!-- (1) select : option이라고 하는 태그가 필요 -->
+        <select>
+            <option value="">색상 선택</option>
+            <option value="red">빨강</option>
+            <option value="blue">파랑</option>
+            <option value="yellow">노랑</option>
+            <option value="green">초록</option>
+        </select>
+        <br>
+        <!-- (2) checkbox : 중복 선택 가능 -->
+        <input type="checkbox" name="fruits" value="str"> 딸기
+        <input type="checkbox" name="fruits" value="gra"> 포도
+        <input type="checkbox" name="fruits" value="ban"> 바나나
+        <br>
+        <!-- (3) radio : 중복 선택 불가능 -->
+        <input type="radio" name="gender" value="man"> 남자
+        <input type="radio" name="gender" value="woman"> 여자
+        <br>
+        <!-- ★★ 중요 ★★
+        제출, 초기화 버튼의 위치는 무조건 !!! form 태그 내부 -->
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
