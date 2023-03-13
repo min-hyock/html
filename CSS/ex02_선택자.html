@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 선택자의 종류 */
+
+      /* 
+        (1) 전체선택자  : *
+        모든 요소를 선택
+        */
+
+      * {
+        color: blue;
+      }
+
+      /* 
+        (2) 태그선택자 : 태그이름 */
+
+      li {
+        color: green;
+      }
+
+      /* 구분해서 지정해주고 싶을 때 !
+        -> 클래스, 아이디 사용 !!
+        클래스 : 중복 가능, 재사용성 뛰어남
+        아이디 : 중복 불가능 !!! 한 문서당 그 아이디는 한 번만 쓰기 !
+                (로고, 검색창, 상단바 같은 고유한 디자인)
+      */
+      
+      /* (3) 클래스 선택자 : .클래스이름 */
+
+      .one {
+        color: lightcoral;
+      }
+
+      /* (4) 아이디 선택자 : #아이디이름 */
+
+      #two {
+        color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>나를 행복하게 만드는 것</h1>
+
+    <ul>
+      <li id="two">잠</li>
+      <li>게임</li>
+      <li class="one">술자리</li>
+    </ul>
+  </body>
+</html>
