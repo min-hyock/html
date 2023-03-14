@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* display */
+      /* (1) display : inline 
+                내가 담은 컨턴츠까지만 크기로 삼는 속성
+                span, a -> 기본값 inline
+                ★ width, height 값 설정이 불가능
+                이유 ! 내가 이미 "컨텐츠만큼만" 크기설정을 한 것 */
+
+      /* (2) display : block 
+                가로로 한 줄의 영역을 차지하는 속성
+                p, div -> 기본값 block
+                ★ width, height 값 설정 가능 */
+
+      /* (3) display : none
+                요소를 눈에 보이지 않게 하는 속성 */
+
+      p {
+        background-color: lightskyblue;
+        display: inline;
+      }
+
+      span {
+        background-color: lightcoral;
+        display: block;
+      }
+
+      #answer {
+        display: none;
+        background-color: pink;
+      }
+      #question:hover+#answer{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>p태그</p>
+    <p>p태그</p>
+    <p>p태그</p>
+
+    <span>span태그</span>
+    <span>span태그</span>
+    <span>span태그</span>
+
+    <h1 id="question">오늘 점심 뭐 드세요 ?</h1>
+    <h1 id="answer">하입보이</h1>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 반응선택자 */
+      /* (1) 대상:hover
+        - 대상에 마우스를 올렸을 때  */
+      h1:hover {
+        color: brown;
+      }
+
+      /* (2) 대상:active
+        - 대상을 클릭했을 때 */
+      h1:active {
+        color: tomato;
+      }
+
+      /* 태그 뿐만 아니라 다양한 선택자에 적용할 수 있다 */
+      .subTitle:active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>좋아하는 카페음료</h1>
+    <h2 class="subTitle">스타벅스의</h2>
+    <p>아이스아메리카노</p>
+  </body>
+</html>

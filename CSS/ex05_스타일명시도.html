@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 명시도 */
+      /* 
+        전체선택자   0
+        타입선택자   1
+        클래스      10
+        아이디      100
+        !important 1000
+        */
+      #temp {
+        background-color: yellow;
+      }
+
+      * {
+        background-color: green !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="temp">변경해보자</p>
+  </body>
+</html>

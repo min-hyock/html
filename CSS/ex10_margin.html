@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* margin : 테두리를 기준으로 바깥쪽 여백
+        body태그 margin 기본값 : 8px */
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: lightskyblue;
+        border: 2px solid black;
+        margin-left: 0px;
+        margin-top: 100px;
+      }
+      body {
+        margin: 0;
+      }
+      #box1 {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        margin-bottom: 15px;
+      }
+      #box2 {
+        width: 100px;
+        height: 100px;
+        background-color: lavender;
+        margin-top: 30px;
+      }
+
+      /* 마진중첩현상 */
+      /* 같은 영역에 겹쳐서 마진이 적용되면
+      그 중 큰 마진으로 적용된다.
+      (누적되지 않는다 !!!) 
+      ex) 15와 10이 중첩 -> 15
+      */
+    </style>
+  </head>
+  <body>
+    <h3>예제</h3>
+    <div id="box">내용</div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+  </body>
+</html>

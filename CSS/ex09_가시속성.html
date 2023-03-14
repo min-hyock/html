@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grayB {
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+      }
+
+      #yellowB {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        /* 눈에 보이지도 않고 자리도 없애버릴때 */
+        /* display: none; */
+        /* 눈에는 보이지 않지만 자리는 그대로 남길 때 
+        (다시 보이게 하는거 : visibility : visible) */
+        visibility: hidden;
+      }
+      #greenB {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grayB">
+      회색 박스 안
+      <div id="yellowB">노랑박스</div>
+      <div id="greenB">초록박스</div>
+    </div>
+  </body>
+</html>
