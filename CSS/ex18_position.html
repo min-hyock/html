@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parents > div{
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+
+        /* (1) static : 정적인
+             - position 속성의 기본값. 위치속성 비활성화 */
+        #static{
+            top : 20px;
+            left: 15px;
+        }
+
+        /* (2) relative : 상대적인
+             - 위치속성 활성화 ! / 기준 : 원래 있던 위치 */
+        #relative{
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+
+        /* (3) absolute : 절대적인
+             - 기준 : position이 static이 아닌 부모 !!
+               부모가 없거나, 부모가 전부 static일 때는
+               body 태그를 기준으로 */
+
+        #absolute{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        /* (4) fixed : 고정적인 */
+        #fixed{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>body태그 안</p>
+    <div id="parents">
+        <p>parents 안쪽 !</p>
+        <div id="static">static</div>
+        <div id="relative">relative</div>
+        <div id="absolute">absolute</div>
+        <div id="fixed">fixed</div>
+    </div>
+</body>
+</html>

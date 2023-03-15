@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #down > div {
+        width: 100px;
+        height: 100px;
+      }
+      #a {
+        position: absolute;
+        background-color: red;
+      }
+      #b {
+        position: absolute;
+        background-color: green;
+        left: 100px;
+        bottom: 200px;
+    }
+    #c {
+        position: absolute;
+        background-color: blue;
+        left: 200px;
+        bottom: 100px;
+    }
+    #d {
+        position: absolute;
+        background-color: yellow;
+        left: 300px;
+        bottom: 0px;
+    }
+      #up {
+        background-color: lightgray;
+        width: 400px;
+        height: 50px;
+      }
+      #down {
+        background-color: rgb(170, 165, 165);
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="up">
+        <div id="down">
+            <div id="a"></div>
+            <div id="b"></div>
+            <div id="c"></div>
+            <div id="d"></div>
+        </div>
+    </div>
+  </body>
+</html>
