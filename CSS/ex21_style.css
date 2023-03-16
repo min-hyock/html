@@ -1,0 +1,15 @@
+@import url("다른 css 파일");
+
+h1{
+    color: blue;
+}
+
+p{
+    font-size: 30px;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: silver;
+}
