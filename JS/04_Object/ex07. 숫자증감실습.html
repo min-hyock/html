@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+</head>
+<body>
+    <span id="spanTag">0</span>
+    <br>
+    <button onclick="valUp()">+1 증가</button>
+    <button onclick="valDown()">-1 감소</button>
+
+    <script>
+        // 1. span요소 가져오기
+        let spanVal = document.getElementById('spanTag')
+        // 2. +1 버튼 클릭 시 -> 숫자 증가
+        const valUp = ()=>{
+            let spanNum = Number(spanVal.innerText);
+            spanVal.innerText = spanNum + 1;
+        }
+        // 3. -1 버튼 클릭 시 -> 숫자 감소
+        const valDown = ()=>{
+            let spanNum = Number(spanVal.innerText);
+            // 4. 0이하에서는 감소 X
+            if(spanNum > 0){
+            spanVal.innerText = spanNum - 1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img practice</title>
+</head>
+<body>
+    <img src="https://i.ytimg.com/vi/QWYESMJzlmY/maxresdefault.jpg"
+    alt="" width="300px" id="imgId" class="imgClass">
+    <br>
+    <button onclick="imgChange()">이미지 변경</button>
+
+    <script>
+        // 첫번째 사진 이미지 주소 복사 값
+        let src1 = 'https://i.ytimg.com/vi/QWYESMJzlmY/maxresdefault.jpg'
+        // 두번째 사진 이미지 주소 복사 값
+        let src2 = 'https://i.ytimg.com/vi/SNiUgiy8UhY/maxresdefault.jpg'
+
+        // 1. 이미지 요소 가져오기
+        let imgVal = document.getElementById('imgId');
+        imgVal = document.getElementsByClassName('imgClass')[0];
+        imgVal = document.querySelector('img'); // 태그 선택자
+        imgVal = document.querySelector('#imgId'); // 아이디 선택자
+        imgVal = document.querySelector('.imgClass'); // 클래스 선택자
+        imgVal = document.querySelectorAll('img')[0]; // 태그 선택자
+        
+        // 2. 버튼 클릭 시 이미지 변경
+        const imgChange = () => {
+            // 이미지 src 속성에 접근
+            // 첫번째 이미지일 때 -> 두번째 이미지로
+            imgVal.src = src2;
+            // 두번째 이미지일 때 -> 첫번째 이미지로
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+        // li요소들 가져오기
+        let subList = document.getElementsByTagName('li');
+        console.log(subList[2].innerText);
+        console.log(subList.length);
+
+        for(let i = 0;i < subList.length;i ++){
+            console.log(subList[i].innerText);
+        }
+
+        for(let i of subList){
+            console.log(i.innerText);
+        }
+
+        // HTML Collection -> 유사 배열
+        // 배열의 형태, 인덱스 O, 길이 O
+
+        // 배열 관련 함수 사용 X
+        // subList.forEach(element=>{
+        //    console.log(element.innerText);
+        // })
+    </script>
+</body>
+</html>

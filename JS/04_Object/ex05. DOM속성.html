@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM property</title>
+</head>
+<body>
+    <div id="container">
+        <p>Hello World!</p>
+        <p style="display: none;">Hidden text</p>
+    </div>
+    <button id="textBtn">TEXT</button>
+    <button onclick="htmlFunc()">HTML</button>
+
+    <script>
+        // 1.div 요소에 접근하기 -> getElementById()
+        let divVal = document.getElementById('container');
+        console.log('요소 가져오기 :',divVal);
+        
+        // 2. text버튼 클릭 시 요소에서 내용만 -> innerText, textContent
+        document.getElementById('textBtn').addEventListener('click', ()=>{
+            // console.log('work')
+            // let divText = document.getElementById('container').innerText
+            // console.log('내용만 :', divText)
+            console.log('내용만 :',divVal.innerText)
+            console.log('숨겨진 내용까지 :',divVal.textContent)
+
+            // 내용 변경
+            // divVal.innerText = '내용 변경 !'
+        })
+
+        // 3. html버튼 클릭 시 요소 태그까지 -> innerHTML
+        const htmlFunc = ()=>{
+            // console.log('work');
+            divVal.innerHTML = '<h1> JavaScript 💙 </h1>'
+        }
+    </script>
+</body>
+</html>

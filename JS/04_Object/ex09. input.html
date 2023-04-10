@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input property</title>
+</head>
+<body>
+    <input type="text" id="inputTag">
+    <button onclick="getInput()">클릭</button>
+
+    <script>
+        // input 태그에 내용을 입력하고 버튼 클릭 시,
+        // 해당 내용이 알림팝업창으로 나올 수 있게끔 !
+
+        // input, select, textarea -> value 속성으로 접근 !
+        const getInput = () => {
+            let inputVal = document.getElementById('inputTag').value;
+            console.log(inputVal);
+            alert(inputVal)
+        }
+    </script>
+</body>
+</html>
