@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic event</title>
+    <style>
+        button{
+            width: 100px;
+            height: 60px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        .click{
+            background-color: lightpink;
+        }
+        .on{
+            background-color: lightblue;
+        }
+    </style>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        // DOM 생성 후 시작
+        // $(document).ready(()=>{
+            // 코드 작성
+        // })
+
+        // (()=>{
+            // 코드 작성
+        // })
+        
+        (()=>{
+            // click vs on
+            $('.click').click(()=>{
+                $('body').append('<button class="click">click</button>');
+            })
+            // 동적이벤트
+            // $(document).on(이벤트타입, 이벤트대상, 이벤트핸들러)
+            $(document).on('click','.on',()=>{
+                $('body').append('<button class="on">on</button>');
+            })
+        })
+    </script>
+</head>
+<body>
+    <button class="click">click</button>
+    <button class="on">on</button>
+    <br>
+    <script>
+        // click vs on
+        $('.click').click(()=>{
+            $('body').append('<button class="click">click</button>');
+        })
+        // 동적이벤트
+        // $(document).on(이벤트타입, 이벤트대상, 이벤트핸들러)
+        $(document).on('click','.on',()=>{
+            $('body').append('<button class="on">on</button>');
+        })
+    </script>
+</body>
+</html>

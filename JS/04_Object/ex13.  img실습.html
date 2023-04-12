@@ -30,9 +30,12 @@
         const imgChange = () => {
             // 이미지 src 속성에 접근
             // 첫번째 이미지일 때 -> 두번째 이미지로
-            imgVal.src = src2;
-            // 두번째 이미지일 때 -> 첫번째 이미지로
-            
+            if(imgVal.src == src1){
+                imgVal.src = src2;
+            }else{
+                // 두번째 이미지일 때 -> 첫번째 이미지로
+                imgVal.src = src1;
+            }
         }
     </script>
 </body>
