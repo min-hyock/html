@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+
+    <title>movie API ajax</title>
+    <script src="js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <!-- 영화진흥위원회API를 가져와서
+    일일 박스오피스 영화 TOP10의
+    순위, 영화이름, 개봉일 출력 -->
+    <button onclick="getAPI()">순위 보기 👀</button>
+    <br><br>
+    <div id="container"></div>
+
+    <script>
+        // ajax -> 비동기 통신 방법
+        
+        // j쿼리에 접근 -> $.
+        // ajax메소드 사용 -> ajax()
+        // 데이터는 JSON 형태로 -> {key : value, ~}
+        let movieURL = 	'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20230101'
+        const getAPI = () => {
+            $.ajax({
+                // 어디랑 통신할 건지
+                url : movieURL,
+                // 어떤 방식으로 통신할 건지
+                type : 'get',
+                // 통신 성공 시
+                success : (response)=>{
+                    console.log(response.boxOfficeResult.dailyBoxOfficeList);
+                    let movieList = response.boxOfficeResult.dailyBoxOfficeList;
+                    // console.log(movieList[0].rank);
+                    // console.log(movieList[0].movieNm);
+                    // console.log(movieList[0].openDt);
+                    for(let i = 0 ;i < movieList.length ;i++){
+                        console.log(movieList[i].rank,movieList[i].movieNm,movieList[i].openDt);
+                    }
+                    let tabelForm = `
+                    <table>
+                        <tr>
+                            <th>순위</th>
+                            <th>영화제목</th>
+                            <th>개봉일</th>
+                        </tr>
+                    `;
+                    for(let i of movieList){
+                        tabelForm += `
+                        <tr>
+                            <td>${i.rank}</td>
+                            <td>${i.movieNm}</td>
+                            <td>${i.openDt}</td>
+                        </tr>
+                        `
+                    }
+                    tabelForm += `</table>`;
+                    $('#container').html(tabelForm);
+                },
+                // 통신 실패 시
+                error : ()=>{
+                    console.log('error')
+                }
+            })
+        }
+    </script>
+</body>
+</html>

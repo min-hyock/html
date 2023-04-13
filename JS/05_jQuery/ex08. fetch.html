@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie API fetch</title>
+</head>
+<body>
+    <!-- 영화진흥위원회API를 가져와서
+    일일 박스오피스 영화 TOP10의
+    순위, 영화이름, 개봉일 출력 -->
+    <button onclick="getAPI()">순위 보기 👀</button>
+    <br><br>
+    <div id="container"></div>
+
+    <script>
+        let movieURL = 	'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20230101'
+        const getAPI = ()=>{
+            fetch(movieURL)
+            .then(response => response.json())
+            // 성공
+            .then(data => {
+                // console.log(data.boxOfficeResult.dailyBoxOfficeList)
+                let movieList = data.boxOfficeResult.dailyBoxOfficeList;
+                // console.log(movieList)
+                for(let i of movieList){
+                    console.log(i.rank,i.movieNm,i.openDt)
+                }
+            })
+            // 실패
+            .catch(error => console.log('error'));
+        }
+    </script>
+</body>
+</html>
